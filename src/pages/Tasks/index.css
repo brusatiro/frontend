@@ -1,0 +1,14 @@
+.task-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container {
+    background-color: rgba(226, 226, 226, 0.877);
+    padding: 10px 50px 10px 50px;
+    border-radius: 20px;
+    margin-bottom: 0px;
+}
+
