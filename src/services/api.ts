@@ -1,18 +1,10 @@
-import axios from 'axios'
+import axios from 'axios';
+import dotenv from 'dotenv';
 
-// const api = axios.create(
-//     {
-//         baseURL: "http://localhost:3333",
-//         withCredentials: false,
-//         headers: {
-//             'Access-Control-Allow-Origin': '*',
-//             'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-//         }
-//     })
-
+dotenv.config();
 
 const api = axios.create({
-    baseURL: "https://backend-fiap.herokuapp.com"
+    baseURL: "process.env.REACT_APP_BACKEND"
     })
 
 export default api;
