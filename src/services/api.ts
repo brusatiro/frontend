@@ -12,7 +12,7 @@ import axios from 'axios'
 
 
 const api = axios.create({
-    baseURL: "https://backend-fiap.herokuapp.com"
+    baseURL: "https://backend-fiap.herokuapp.com/tasks"
     })
 
 export default api;
