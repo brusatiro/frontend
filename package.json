@@ -49,6 +49,7 @@
     ]
   },
   "devDependencies": {
+    "@types/dotenv-safe": "^8.1.2",
     "react-router-dom": "^6.11.1"
   }
 }

@@ -2,9 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import * as dotenv from 'dotenv';
-
-dotenv.config();
+import * as dotenvSafe from 'dotenv-safe';
+dotenvSafe.config();
 
 ReactDOM.render(
   <React.StrictMode>
