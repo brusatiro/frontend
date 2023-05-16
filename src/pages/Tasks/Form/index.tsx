@@ -22,10 +22,6 @@ const Tasks: React.FC = () => {
         }
     }, [id])
 
-    
-    function back(){
-        navigate(-1)
-    }
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
         setModel({
             ...model,
@@ -34,13 +30,21 @@ const Tasks: React.FC = () => {
     }
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-
-        const response = await api.post('/tasks', model)
-        console.log(response)
+        if (id != undefined) {
+            const response = await api.post(`/tasks/${id}`, model)
+        }
+        else {
+            const response = await api.post(`/tasks`, model)
+        }
+        back()
+    }
+    
+    function back(){
+        navigate(-1)
     }
 
     async function findTask(id: string) {
-        const response = await api.get("tasks/$ {id}")
+        const response = await api.get(`tasks/${id}`)
         console.log(response)
         setModel({
             title: response.data.title,
